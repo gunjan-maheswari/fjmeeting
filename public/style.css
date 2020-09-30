@@ -13,14 +13,33 @@
     font-size: 30px;
 }
 
+.wc-header {
+    background-color: #c52323;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    box-sizing: content-box;
+    color: #ffffff;
+    font-weight: 500;
+    height: 30px;
+    left: 0;
+    letter-spacing: 0.5px;
+    padding: 8px 8px 0 8px;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    z-index: 1;
+    font-size: 20px;
+    font-family: arial;
+}
+
 .main__left {
-    flex: 0.8;
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .main__right {
-    flex: 0.2
+    display: flex;
+    flex-direction: column;
 }
 
 .main__videos {
@@ -112,3 +131,42 @@
     color: #CC3B33;
 }
 
+
+/* The sidebar menu */
+.sidebar {
+    height: 95%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 33px;
+    bottom: 64px;
+    left: 0;
+    background-color: #1C1E20; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 5px; /* Place content 50px from the top */
+    transition: 0.3s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+  /* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: -20px;
+    right: 5%;
+    font-size: 36px;
+    margin-left: 95%;
+  }

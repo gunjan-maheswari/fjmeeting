@@ -148,9 +148,11 @@ const showHideChat = () => {
   if ('show'==enabled) {
     document.getElementById('chatWin').style.visibility = 'visible'
     document.getElementById('chatWin').value = 'hide'
+    document.getElementById('disableChatAlt').style.visibility = 'hidden'
   } else {
     document.getElementById('chatWin').style.visibility = 'hidden'
     document.getElementById('chatWin').value = 'show'
+    document.getElementById('disableChatAlt').style.visibility = 'visible'
   }
 }
 
@@ -159,10 +161,21 @@ const leaveMeeting = () => {
   let enabled = myVideoStream.getVideoTracks()[0].enabled;
   if (enabled) {
     myVideoStream.getVideoTracks()[0].enabled = false;
+  }
     document.getElementById('chat_message').style.visibility = 'hidden'
     document.getElementById('controlDiv').innerHTML = ' '
     document.getElementById('video-grid').innerHTML = '<h3>You left the meeting</h3>'
-  }
+}
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "350px";
+  document.getElementById("main_left_part").style.marginLeft = "350px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main_left_part").style.marginLeft = "0";
 }
 
 

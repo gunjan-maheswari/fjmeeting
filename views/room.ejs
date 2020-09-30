@@ -32,11 +32,28 @@
 </head>
 <body>
    <div class="main">
-      <div class="main__left">
-         <div class="main__logo">FUJITSU MEETING TOOL</div>
+      <div class="main__left" id="main_left_part">
+         <div class="wc-header">FUJITSU MEETING TOOL</div>
          <div class="main__videos">
             <div id="video-grid">
 
+            </div>
+            <div id="mySidebar" class="sidebar">
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" title="Close">&times;</a>
+               <div class="main__right" id="chatWin">
+                  <div class="main__header">
+                     <h6>Chat</h6>
+                  </div>
+                  <div class="main__chat_window">
+                     <!-- <div id="disableChatAlt" style="visibility: hidden;"><h5>Chats are disabled now.</h5><h6>Click again on 'Chat' button on bottom to enable.</h6></div> -->
+                     <ul class="messages">
+                        
+                     </ul>
+                  </div>
+                  <div class="main__message_container">
+                     <input id="chat_message" type="text" placeholder="Type your message here & press enter...">
+                  </div>
+               </div>
             </div>
          </div>
          <div class="main__controls" id="controlDiv">
@@ -63,7 +80,7 @@
                   <i class="fas fa-share"></i>
                   <span>Share Screen</span>
                </div>
-               <div onclick="showHideChat()" class="main__controls__button">
+               <div onclick="openNav()" class="main__controls__button">
                   <i class="fas fa-comment-alt"></i>
                   <span>Chat</span>
                </div>
@@ -75,20 +92,7 @@
             </div>
          </div>
       </div>
-      <div class="main__right" id="chatWin">
-         <div class="main__header">
-            <h6>Chat</h6>
-         </div>
-         <div class="main__chat_window">
-            <ul class="messages">
-               
-            </ul>
-
-         </div>
-         <div class="main__message_container">
-            <input id="chat_message" type="text" placeholder="Type message here...">
-         </div>
-      </div>
+      
    </div>
 </body>
 </html>
